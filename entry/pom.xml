@@ -13,4 +13,11 @@
     <build>
         <finalName>entry</finalName>
     </build>
+    <dependencies>
+        <dependency>
+            <groupId>com.quhxuxm.quh.proj.tonghao</groupId>
+            <artifactId>service</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 </project>

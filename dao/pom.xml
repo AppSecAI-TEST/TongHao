@@ -10,4 +10,11 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>dao</artifactId>
     <name>Tong Hao - Dao</name>
+    <dependencies>
+        <dependency>
+            <groupId>com.quhxuxm.quh.proj.tonghao</groupId>
+            <artifactId>domain</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 </project>
