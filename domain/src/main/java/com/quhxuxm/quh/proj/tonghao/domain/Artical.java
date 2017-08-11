@@ -29,8 +29,7 @@ public class Artical {
             length = 255)
     private String summary;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "AUTHOR_ID",
-            nullable = false)
+    @JoinColumn(name = "AUTHOR_ID")
     private Author author;
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "ARTICAL_LABEL",

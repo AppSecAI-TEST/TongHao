@@ -12,7 +12,7 @@ public class Author {
     @GeneratedValue
     @Column(name = "_ID")
     private Long id;
-    @OneToMany(mappedBy = "Artical")
+    @OneToMany(mappedBy = "author")
     private List<Artical> articals;
     @Column(name = "NICK_NAME",
             nullable = false,
