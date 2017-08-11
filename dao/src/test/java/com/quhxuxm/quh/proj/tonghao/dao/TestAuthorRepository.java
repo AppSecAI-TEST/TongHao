@@ -11,6 +11,7 @@ import org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.Date;
+import java.util.UUID;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath*:/META-INF/spring/dao.xml")
@@ -22,9 +23,9 @@ public class TestAuthorRepository {
     public void testAuthorRepository() {
         IAuthorRepository authorRepository = daoApplicationContext
                 .getBean("IAuthorRepository", IAuthorRepository.class);
-        Author author=new Author();
+        Author author = new Author();
         author.setRegistrationDate(new Date());
-        author.setNickName("Qu Hao 1");
+        author.setNickName("Qu Hao UT - " + UUID.randomUUID().toString());
         authorRepository.save(author);
     }
 }
