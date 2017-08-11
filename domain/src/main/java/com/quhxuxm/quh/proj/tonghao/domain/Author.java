@@ -13,7 +13,7 @@ public class Author {
     @Column(name = "_ID")
     private Long id;
     @OneToMany(mappedBy = "author")
-    private List<Artical> articals;
+    private List<Blog> blogs;
     @Column(name = "NICK_NAME",
             nullable = false,
             unique = true,
@@ -43,14 +43,6 @@ public class Author {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public List<Artical> getArticals() {
-        return articals;
-    }
-
-    public void setArticals(List<Artical> articals) {
-        this.articals = articals;
     }
 
     public String getNickName() {
@@ -91,5 +83,13 @@ public class Author {
 
     public void setLabels(Set<Label> labels) {
         this.labels = labels;
+    }
+
+    public List<Blog> getBlogs() {
+        return blogs;
+    }
+
+    public void setBlogs(List<Blog> blogs) {
+        this.blogs = blogs;
     }
 }

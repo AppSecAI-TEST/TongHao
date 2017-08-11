@@ -34,5 +34,10 @@
                 <property name="showSql" value="true"/>
             </bean>
         </property>
+        <property name="jpaPropertyMap">
+            <map>
+                <entry key="hibernate.format_sql" value="true"></entry>
+            </map>
+        </property>
     </bean>
 </beans>

@@ -29,8 +29,8 @@ public class Artical {
             length = 255)
     private String summary;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "AUTHOR_ID")
-    private Author author;
+    @JoinColumn(name = "BLOG_ID")
+    private Blog blog;
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "ARTICAL_LABEL",
             joinColumns = @JoinColumn(name = "ARTICAL_ID",
@@ -87,12 +87,12 @@ public class Artical {
         this.summary = summary;
     }
 
-    public Author getAuthor() {
-        return author;
+    public Blog getBlog() {
+        return blog;
     }
 
-    public void setAuthor(Author author) {
-        this.author = author;
+    public void setBlog(Blog blog) {
+        this.blog = blog;
     }
 
     public Set<Label> getLabels() {
